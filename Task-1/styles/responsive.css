@@ -1,0 +1,83 @@
+@media(max-width:850px){
+    .navigationbar{
+        height: 100px;
+    }
+    
+    .hero-section{
+        height: auto;
+    }
+
+    .hero-section .landing-page{
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .landing-page .texts{
+        width: 100%;
+        height: auto;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+    .image-holder{
+        width: 100%;
+    }
+
+    
+.hero-section .landing-page .image-holder img{
+        width: 100%;
+        height: auto;
+        transform: rotate(0deg);
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .products,
+    .reviews{
+        gap: 60px;
+    }
+    
+    .register{
+        text-align: center;
+    }
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+@media(max-width:500px){
+    
+    .hideonmobile{
+        display:none;
+    }
+
+    .hamburger{
+        display: flex;
+        font-size: 1.4rem;
+    }
+
+    .close{
+        font-size: 1.5rem;
+        margin-right: auto;
+    }
+
+    .active{
+        transition: transform 0.5s ease;
+        transform: translateX(0%);
+    }
+
+   .sidebar{
+        display: flex;
+        width: 100%;
+    }
+
+}

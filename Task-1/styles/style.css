@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,300&display=swap');
+
+:root{
+    --background-color:white;
+    --text:white;
+    --yellow:#ffd602;
+    --red:#e81d21;
+    --blue:#2aaede;
+    --green:#006953;
+    --grey:#8c8d91;
+    --font:'Poppins', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    background-color: white;
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+    border-radius: 25px;
+    width: 20px;
+}
+
+html, body {
+    width: 100%;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    font-family: var(--font);
+}
+
+.navigationbar {
+    width: 100%;
+    height: 90px;
+    background-color: var(--background-color);
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigationbar .nav-bar {
+    width: 100%;
+    height: 100%;
+
+    justify-content: flex-end;
+    list-style: none;
+    gap: 25px;
+
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    height: 90px;
+}
+
+.navigationbar .nav-bar li a {
+    text-decoration: none;
+    color: var(--blue);
+    transition: 0.5s ease;
+}
+
+.navigationbar .sidebar li a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.navigationbar ul li a:hover{
+    color: var(--yellow);
+}
+
+.hamburger {
+    display: none;
+}
+
+.navigationbar .sidebar {
+    padding: 30px;
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.348);
+
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 25px;
+    list-style: none;
+    transform: translateX(100%);
+    transition: all ease 0.5s;
+}
+
+.hero-section {
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 0px 15px 15px 15px;
+    background-color: var(--background-color);
+}
+
+.hero-section .landing-page {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    justify-content: space-evenly;
+}
+
+.hero-section .landing-page .texts {
+    /* width: 500px; */
+    /* width: 50%; */
+    height: 500px;
+    padding: 25px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+
+    flex-direction: column;
+}
+
+.hero-section .landing-page .texts .heading {
+    font-size: 3.4rem;
+    color: var(--background-color);
+    margin-bottom: 25px;
+    font-family: 'Merriweather', serif;
+}
+
+.hero-section .landing-page .texts .detail {
+    font-size: 1.4rem;
+    color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section .landing-page .image-holder {
+    width: auto;
+}
+
+.hero-section .landing-page .image-holder img {
+    height: 600px;
+    transform: rotate(20deg);
+}
+
+
+.products-holder, .reviews-holder {
+    max-width: 950px;
+    width: 100%;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+.products, .reviews {
+    width: 100%;
+    padding: 30px 0px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.products {
+    align-items: flex-start;
+}
+
+/* product card designs are in productdesign.css */
+
+.reviews {
+    padding-bottom: 40px;
+}
+
+.reviews .style {
+    width: 250px;
+    height: 300px;
+    padding: 15px;
+    position: relative;
+
+    border-radius: 15px 35% 15px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-1 {
+    background-image: url('../images/model1.jpg');
+}
+
+.bg-2 {
+    background-image: url('../images/model2.jpg');
+}
+
+.bg-3 {
+    background-image: url('../images/model3.jpg');
+}
+
+.reviews .style .navigate {
+    width: 200px;
+    height: 100px;
+    background-color:var(--blue);
+    position: absolute;
+    bottom: -50px;
+    left: 25px;
+    margin: auto;
+    border-radius: 0px 25px 0px 25px;
+    
+    flex-direction: column;
+    gap: 15px;
+    color: var(--background-color);
+}
+
+.navigate button {
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color:var(--yellow);
+    font-family: 'poppins';
+}
+
+.navigate button i{
+    margin-left: 10px;
+}
+
+.register {
+    width: 100%;
+    padding: 30px;
+    background-color:var(--yellow);
+    
+    gap: 30px;
+    flex-wrap: wrap;
+    color: black;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.register input {
+    width: 300px;
+    height: 50px;
+    padding: 0px 15px;
+    border-radius: 25px;
+    border: none;
+}
+
+footer {
+    width: 100%;
+    text-transform: capitalize;
+    background-color: var(--blue);
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 50px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--background-color);
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: var(--blue);
+}
+
+.socialIcons a:hover {
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: var(--yellow);
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: var(--background-color);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    color: var(--yellow);
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #1386c9;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: var(--background-color);
+}
+
+.designer {
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
